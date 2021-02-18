@@ -3,7 +3,7 @@ import React from 'react';
 const JobCard = (props) => {
    return (
       <div className="job-card">
-         <h3>{props.job.title} at {props.job.company}</h3>
+         <h3>{props.job.title}, {props.job.company.toUpperCase()}</h3>
          <p>{props.job.location}</p>
          <p>{props.job.description}</p>
          <p>Job Type: {props.job.job_type}</p>
