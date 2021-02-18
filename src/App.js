@@ -14,9 +14,8 @@ class App extends React.Component {
     fetch('https://divercity-test.herokuapp.com/jobs')
       .then(resp => resp.json())
       .then(data => this.setState({
-        jobs: data
+        jobs: data.jobs
       }))
-    .then(() => console.log(this.state.jobs))
   }
 
   render() {
