@@ -1,4 +1,8 @@
 import React from 'react'; 
+import { Route, Switch } from 'react-router-dom';
+import Home from './Components/Home';
+import JobList from
+  './Components/JobList';
 import './App.css';
 
 class App extends React.Component {
@@ -18,7 +22,15 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Divercity Frontend Challenge</h1>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route path='/jobs'
+            render={routerProps =>
+              <JobList {...routerProps}
+              jobs={this.state.jobs}
+              />}
+          />
+        </Switch>
       </div>
     );
   }
