@@ -3,10 +3,10 @@ import JobCard from './JobCard';
 
 class JobList extends React.Component {
    render() {
-      console.log(this.props.jobs)
+      // console.log(this.props.jobs)
       return (
          <div>
-            <h1>Job List</h1>
+            <h1 className="header">Job Openings</h1>
             {this.props.jobs && this.props.jobs.map(job => <JobCard key={job.id} job={job}/>)}
          </div>
       )
