@@ -37,6 +37,15 @@
 .job-card h3 {
   padding-bottom: 10px;
   color: navy;
+  text-align: center;
+}
+
+.location {
+  color: blue; 
+}
+
+.primary-text {
+  font-size: 17px;
 }
 
 .skills {

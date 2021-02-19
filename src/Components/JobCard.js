@@ -5,8 +5,8 @@ const JobCard = (props) => {
       <div className="job-card">
          <h3>{props.job.company.toUpperCase()}</h3>
          <h3>{props.job.title}, {props.job.job_type}</h3>
-         <p>📍 {props.job.location}</p>
-         <div dangerouslySetInnerHTML={{ __html: props.job.description }}></div>
+         <p className="location">📍 {props.job.location}</p>
+         <div className="primary-text" dangerouslySetInnerHTML={{ __html: props.job.description }}></div>
          <span className="skills">You may be a good fit for this role if you have the following skills:</span> 
          {props.job.skills_tag.map(skill => <p className="skills-section">{skill}</p>)}
          <div className="extra-details">
