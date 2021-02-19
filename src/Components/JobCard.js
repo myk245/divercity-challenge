@@ -3,12 +3,16 @@ import React from 'react';
 const JobCard = (props) => {
    return (
       <div className="job-card">
-         <h3>{props.job.title}, {props.job.company.toUpperCase()}</h3>
+         <h3>{props.job.company.toUpperCase()}</h3>
+         <h3>{props.job.title}, {props.job.job_type}</h3>
          <div dangerouslySetInnerHTML={{__html: props.job.description}}></div>
-         <p>Job Type: {props.job.job_type}</p>
-         <p>Skills</p>
-         {props.job.skills_tag.map(skill => <p>{skill}</p>)}
-         <p>Current Number of Applicants: {props.job.applicant_count}</p>
+         <span className="skills">You may be a good fit for this role if you have the following skills:</span> 
+         <div className="container">
+            {props.job.skills_tag.map(skill => <p className="container-item">{skill}</p>)}
+         </div>
+         <div className="extra-details">
+            <p>Current Number of Applicants: {props.job.applicant_count}</p>
+         </div>
       </div>
    );
 }
