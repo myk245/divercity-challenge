@@ -14,7 +14,19 @@ class LogIn extends Component {
 
    handleSubmit = (event) => {
       event.preventDefault(); 
-      console.log(this.state.username, this.state.password)
+      
+      fetch('https://divercity-test.herokuapp.com/login', {
+         method: 'POST', 
+         headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+         },
+         body: JSON.stringify({
+            "username": this.state.username,
+            "password": this.state.password
+         })
+      })
+         .then(console.log(this.state.username, this.state.password))
    }
 
    render() {
