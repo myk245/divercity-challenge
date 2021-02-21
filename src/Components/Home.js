@@ -5,10 +5,17 @@ class Home extends React.Component {
       return (
          <div>
             <h1 className="header">Welcome to Divercity</h1>
-            <p>Connecting underrepresented
-            professionals with
-            diverse-minded companies</p>
-            <p>Are you an underrepresented professional in search of your next opportunity? We’ve got you covered. Make new connections and get instant access to jobs with companies that value diversity.</p>
+            <div className="flex-wrapper">
+               <div className="row">
+                  <div className="image-container">
+                     <img className="image" alt="Divercity Home" src="Divercity-Home.png"></img>
+                  </div>
+                  <div className="text-container">
+                     <p className="home-text">Connecting underrepresented
+                     professionals with diverse-minded companies</p>
+                  </div>
+               </div>
+            </div>
          </div>
       )
    }
