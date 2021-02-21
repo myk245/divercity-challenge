@@ -3,9 +3,28 @@ import React from 'react';
 function FilterBar() {
    return (
       <div className="filter-bar">
-         <div>Filter Results</div>
+         <div className="filter-option">Filter By: </div>
          <div className="filter-option">
-            <input type="text" placeholder="Search for names.."></input>
+            <label for="location">Location  </label>
+            <select name="location" id="location">
+               <option value="San Francisco">San Francisco</option>
+               <option value="New York">New York</option>
+               <option value="Miami">Miami</option>
+               <option value="Remote">Remote</option>
+            </select>
+         </div>
+         <div className="filter-option">
+            <label for="job-type">Job Type  </label>
+            <select>
+               <option value="Full Time">Full Time</option>
+               <option value="Part Time">Part Time</option>
+               <option value="Remote">Remote</option>
+               <option value="Internship">Internship</option>
+            </select>
+         </div>
+         <div className="filter-option">
+            <label for="skills">Skills  </label>
+            <input type="text" placeholder="Begin Typing..."></input>
          </div>
       </div>
    )

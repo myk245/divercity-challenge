@@ -6,7 +6,7 @@ class JobList extends React.Component {
    state = {
       jobs: [],
       displayFilterBar: false, 
-      filterTerm: ""
+      location: ""
    }
 
    componentDidMount = () => {
