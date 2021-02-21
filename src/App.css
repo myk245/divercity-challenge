@@ -95,6 +95,10 @@
   font-size: 17px;
 }
 
+.navbar a:hover {
+  color: blue;
+}
+
 .container {
   padding-top: 20px;
   display: flex;
@@ -117,6 +121,7 @@
   border-radius: 8px;
   line-height: 120%;
   text-align: justify;
+  background-color: #f4f4f4;
 }
 
 .job-card:hover {
