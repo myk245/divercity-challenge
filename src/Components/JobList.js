@@ -18,16 +18,16 @@ class JobList extends React.Component {
          }))
    }
 
-   filterBySkill = () => {
-      let jobsToShow = []
-      this.state.jobs.map((job) => {
-         let skillMatch = job.filter(job => job.skills_tags.toLowerCase().includes(this.state.skills.toLowerCase()))
-         if (skillMatch.length > 0) {
-            jobsToShow.push(job)
-         }
-      })
-      return jobsToShow;
-   }
+   // filterBySkill = () => {
+   //    let jobsToShow = []
+   //    this.state.jobs.map((job) => {
+   //       let skillMatch = job.filter(job => job.skills_tags.toLowerCase().includes(this.state.skills.toLowerCase()))
+   //       if (skillMatch.length > 0) {
+   //          jobsToShow.push(job)
+   //       }
+   //    })
+   //    return jobsToShow;
+   // }
 
    render() {
       return (

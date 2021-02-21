@@ -19,31 +19,29 @@ class LogIn extends Component {
 
    render() {
       return (
-         <div>
+         <div className="card">
             <h1 className="header">Login</h1>
-            <div>
+            <div className="column">
                <form>
-                  <label for="username">Username: </label>
+                  <label>Username: </label>
                   <input
                      type="text"
                      name="username"
+                     className="form-input"
                      value={this.state.username}
                      onChange={this.handleChange}
                   />
-                  <br></br>
-                  <label for="password">Password: </label>
+                  <label>Password: </label>
                   <input
                      type="text"
                      name="password"
+                     className="form-input"
                      value={this.state.password}
                      onChange={this.handleChange}
                   />
                   <br></br>
-                  <input
-                     type="submit"
-                     value="Submit"
-                     onClick={this.handleSubmit}
-                  />
+                  <br></br>
+                  <button className="button" onClick={this.handleSubmit}>Login </button>
                </form>
             </div>
          </div>
