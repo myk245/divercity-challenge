@@ -80,6 +80,15 @@
   text-align: center;
 }
 
+.link {
+  color: navy; 
+  text-decoration: none;
+}
+
+.link:visited {
+  color: navy; 
+}
+
 /* Containers/Buttons/Navs */
 .button {
   color: white;

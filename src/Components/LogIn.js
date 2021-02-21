@@ -31,31 +31,34 @@ class LogIn extends Component {
 
    render() {
       return (
-         <div className="card">
-            <h1 className="header">Login</h1>
-            <div className="column">
-               <form>
-                  <label>Username: </label>
-                  <input
-                     type="text"
-                     name="username"
-                     className="form-input"
-                     value={this.state.username}
-                     onChange={this.handleChange}
-                  />
-                  <label>Password: </label>
-                  <input
-                     type="text"
-                     name="password"
-                     className="form-input"
-                     value={this.state.password}
-                     onChange={this.handleChange}
-                  />
-                  <br></br>
-                  <br></br>
-                  <button className="button" onClick={this.handleSubmit}>Login </button>
-               </form>
+         <div>
+            <div className="card">
+               <h1 className="header">Login</h1>
+               <div className="column">
+                  <form>
+                     <label>Username: </label>
+                     <input
+                        type="text"
+                        name="username"
+                        className="form-input"
+                        value={this.state.username}
+                        onChange={this.handleChange}
+                     />
+                     <label>Password: </label>
+                     <input
+                        type="text"
+                        name="password"
+                        className="form-input"
+                        value={this.state.password}
+                        onChange={this.handleChange}
+                     />
+                     <br></br>
+                     <br></br>
+                     <button className="button" onClick={this.handleSubmit}>Login </button>
+                  </form>
+               </div>
             </div>
+            <a className="link" href="/register">Don't have an account? Register here. </a>
          </div>
       )
    }
