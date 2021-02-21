@@ -9,6 +9,7 @@
   text-align: center;
 }
 
+/* Utility Classes */
 .header {
   margin: 20px; 
   padding-top: 20px;
@@ -33,6 +34,7 @@
   padding: 25px;
 }
 
+/* Images */
 .image-container {
   flex: 1 0 0;
   min-width: 300px;
@@ -44,6 +46,11 @@
   height: 100%;
 }
 
+.logo {
+  width: 50%;
+}
+
+/* Text */
 .text-container {
   flex: 2 0 0;
   padding: 50px 10px;
@@ -60,6 +67,7 @@
   text-align: center;
 }
 
+/* Containers/Buttons/Navs */
 .button {
   color: white;
   background-color: #034ab4;
@@ -69,6 +77,22 @@
   display: inline-block;
   border-radius: 5px;
   font-size: 16px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
 .container {
@@ -83,6 +107,7 @@
   color: white; 
 }
 
+/* Job Card Styling */
 .job-card {
   padding: 40px; 
   width: 80%;
