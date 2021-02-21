@@ -7,18 +7,6 @@ import JobList from
 import './App.css';
 
 class App extends React.Component {
-  state = {
-    jobs: []
-  }
-
-  componentDidMount = () => {
-    fetch('https://divercity-test.herokuapp.com/jobs')
-      .then(resp => resp.json())
-      .then(data => this.setState({
-        jobs: data.jobs
-      }))
-  }
-
   render() {
     return (
       <div className="App">
@@ -27,8 +15,9 @@ class App extends React.Component {
           <Route exact path='/' component={Home} />
           <Route path='/jobs'
             render={routerProps =>
-              <JobList {...routerProps}
-              jobs={this.state.jobs}
+              <JobList
+                // {...routerProps}
+              // jobs={this.state.jobs}
               />}
           />
         </Switch>

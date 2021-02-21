@@ -99,6 +99,20 @@
   color: blue;
 }
 
+.filter-bar {
+  display: flex;
+  justify-content: flex-start;
+  width: 60%; 
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px; 
+}
+
+.filter-option {
+  border: 1px solid red;
+  padding: 5px;
+}
+
 .container {
   padding-top: 20px;
   display: flex;

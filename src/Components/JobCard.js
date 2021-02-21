@@ -9,6 +9,8 @@ const JobCard = (props) => {
          <div className="primary-text" dangerouslySetInnerHTML={{ __html: props.job.description }}></div>
          <span className="skills">You may be a good fit for this role if you have the following skills:</span> 
          {props.job.skills_tag.map(skill => <p className="skills-section">{skill}</p>)}
+         <br></br>
+         <a className="button">Apply Now</a>
          <div className="extra-details">
             <p>Current Number of Applicants: {props.job.applicant_count}</p>
          </div>
