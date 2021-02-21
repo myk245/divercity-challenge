@@ -15,7 +15,7 @@ function FilterBar() {
          </div>
          <div className="filter-option">
             <label for="job-type">Job Type  </label>
-            <select>
+            <select name="job-type" id="job-type">
                <option value="Full Time">Full Time</option>
                <option value="Part Time">Part Time</option>
                <option value="Remote">Remote</option>
@@ -24,7 +24,7 @@ function FilterBar() {
          </div>
          <div className="filter-option">
             <label for="skills">Skills  </label>
-            <input type="text" placeholder="Begin Typing..."></input>
+            <input name="skills" id="skills" type="text" placeholder="Begin Typing..."></input>
          </div>
       </div>
    )

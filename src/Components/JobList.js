@@ -5,8 +5,9 @@ import FilterBar from './FilterBar';
 class JobList extends React.Component {
    state = {
       jobs: [],
-      displayFilterBar: false, 
-      location: ""
+      location: "", 
+      jobType: "", 
+      skills: ""
    }
 
    componentDidMount = () => {
@@ -17,10 +18,15 @@ class JobList extends React.Component {
          }))
    }
 
-   toggleFilterBar = () => {
-      this.setState({
-         displayFilterBar: !this.state.displayFilterBar
+   filterBySkill = () => {
+      let jobsToShow = []
+      this.state.jobs.map((job) => {
+         let skillMatch = job.filter(job => job.skills_tags.toLowerCase().includes(this.state.skills.toLowerCase()))
+         if (skillMatch.length > 0) {
+            jobsToShow.push(job)
+         }
       })
+      return jobsToShow;
    }
 
    render() {

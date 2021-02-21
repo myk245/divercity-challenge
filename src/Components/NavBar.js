@@ -8,7 +8,7 @@ function NavBar() {
          </a>
          <a href="/">Home</a>
          <a href="/jobs">Jobs</a>
-         <a href="#about">Log In</a>
+         <a href="/login">Log In</a>
       </div>
    )
 }
