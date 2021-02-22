@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class LogIn extends Component {
    state = {
-      username: "", 
+      username:"",
       password: ""
    }
 
@@ -14,6 +14,12 @@ class LogIn extends Component {
 
    handleSubmit = (event) => {
       event.preventDefault(); 
+
+      // if (!event.target.username.value) {
+      //    alert("Username is required.")
+      // } else if (!event.target.password.value) {
+      //    alert("Please enter your password.")
+      // }
       
       fetch('https://divercity-test.herokuapp.com/login', {
          method: 'POST', 
@@ -26,7 +32,7 @@ class LogIn extends Component {
             "password": this.state.password
          })
       })
-         .then(console.log(this.state.username, this.state.password))
+      .then(alert("Successfully logged in!"))
    }
 
    render() {
@@ -35,7 +41,7 @@ class LogIn extends Component {
             <div className="card">
                <h1 className="header">Login</h1>
                <div className="column">
-                  <form>
+                  <form onSubmit={this.handleSubmit}>
                      <label>Username: </label>
                      <input
                         type="text"
@@ -54,7 +60,7 @@ class LogIn extends Component {
                      />
                      <br></br>
                      <br></br>
-                     <button className="button" onClick={this.handleSubmit}>Login </button>
+                     <button className="button">Login </button>
                   </form>
                </div>
             </div>

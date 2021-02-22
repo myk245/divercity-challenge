@@ -28,7 +28,7 @@ class Registration extends Component {
             "name": this.state.name
          })
       })
-         .then(console.log(this.state.username, this.state.password, this.state.name))
+         .then(alert("Welcome to Divercity!"))
    }
 
    render() {
